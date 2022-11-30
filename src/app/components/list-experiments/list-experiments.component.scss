@@ -1,0 +1,37 @@
+.container {
+    margin-top: 2%;
+}
+
+.demo-table {
+    width: 100%;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+    border-color: currentColor;
+}
+
+.demo-row-is-clicked {
+    font-weight: bold;
+}
+
+.mat-row {
+    cursor: pointer;
+}
+
+.heading {
+    display: flex;
+    margin-bottom: 10px;
+    button {
+        margin-left: 55px;
+    }
+}
+
+.th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+    width: 150px;
+}

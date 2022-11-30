@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="col-12">
+        <button (click)="goToHome()" mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+            <mat-icon>home</mat-icon>
+        </button>
+        <h2> Create Experiment</h2>
+    </div>
+    <app-models-list (selectedModelData)="selectedModelData($event)"></app-models-list>
+    <div class="experiment-form" *ngIf="solutionsJsonSchema">
+        <mat-form-field appearance="fill">
+            <mat-label>Select SDK Version</mat-label>
+            <mat-select [(value)]="sdk_version">
+                <mat-option *ngFor="let item of sdks.items" value={{item.version}}>{{item.version}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Description</mat-label>
+            <textarea matInput [formControl]="descriptionFormControl" placeholder="Ex. It makes me feel..."></textarea>
+        </mat-form-field>
+        <json-schema-form [loadExternalAssets]="true" [schema]="solutionsJsonSchema" framework="material-design"
+            (onSubmit)="onSubmitFn($event)">
+        </json-schema-form>
+    </div>
+</div>

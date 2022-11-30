@@ -1,0 +1,18 @@
+.container {
+    margin-top: 2%;
+    .col-12 {
+        display:flex;
+        h2 {
+            padding-top: 5px;
+        }
+    }
+    .experiment-form{
+        padding: 50px;
+    }
+    ::ng-deep mat-form-field {
+        width: 100%;
+    }
+    ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+        background-color: #fff;
+    }
+}
