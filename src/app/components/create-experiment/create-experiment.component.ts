@@ -13,7 +13,6 @@ export class CreateExperimentComponent implements OnInit {
   sdks: any;
   solutionsJsonSchema: any;
   sdk_version: string | undefined;
-  description: string | undefined;
   descriptionFormControl = new FormControl('', [Validators.required]);
 
   constructor(private modelsService: ModelsService, private router: Router) { }
